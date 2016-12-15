@@ -15,4 +15,11 @@ function Cat () {
  const Markov = new Cat ();
  const Noodles = new Dog ();
 
- Noodles.chase(Markov)
+// method-style
+
+ // Noodles.chase(Markov)
+
+// call and apply used to change what 'this' refers to
+
+// Noodles.chase.call(Markov, Noodles)
+// Noodles.chase.apply(Markov, [Noodles])
