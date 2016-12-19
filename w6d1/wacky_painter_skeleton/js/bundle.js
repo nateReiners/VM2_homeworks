@@ -88,9 +88,9 @@
 	View.prototype.exercise1 = function () {
 	  //Challenge: Give every square the class 'orange'
 	  //Result: Every square should turn orange (we already have a CSS rule)
-		$('li').addClass("orange");
 
 	  //your code here!
+		$('li').addClass('orange');
 	};
 
 	View.prototype.exercise2 = function () {
@@ -108,14 +108,15 @@
 	  //your code here!
 		const $h1 = $("<h1></h1>");
 		$h1.text("i love jquery");
-		($h1).appendTo('body');
+		$('#easel').append($h1);
 	};
 
 	View.prototype.exercise4 = function () {
 	  //Challenge: Write your first name in every other square.
 	  //Result: Your name appears in every other square.
-		$("li:odd").text("NR");
+
 	  //your code here!
+		$('.square:nth-child(odd)').text("Nate")
 	};
 
 	View.prototype.exercise5 = function () {
@@ -127,7 +128,10 @@
 	  //  'data-pos' of every square
 
 	  //your code here!
-
+		$('.square').on("click", e => {
+ 	    const $sq = $(e.currentTarget);
+ 	    alert($sq.attr("data-pos"));
+ 	  });
 	};
 
 	View.prototype.exercise6 = function () {
