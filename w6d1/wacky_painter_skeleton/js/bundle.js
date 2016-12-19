@@ -156,8 +156,11 @@
 	  //rainbow.
 
 	  //your code here!
+		$('#easel').on("mouseenter", ".square", e => {
+ 	    const $sq = $(e.currentTarget);
+ 	    console.log($sq.css("background-color"));
+ 	  });
 
-		
 	};
 
 
