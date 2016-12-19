@@ -142,6 +142,10 @@
 	  //hint: use window._randomColorString() (defined at top) to get a random color!
 
 	  //your code here!
+		$('.square').each( (idx, el)  => {
+			let $sq = $(el);
+			$sq.css("background-color", _randomColorString());
+		});
 	};
 
 	View.prototype.exercise7 = function(){
@@ -152,6 +156,8 @@
 	  //rainbow.
 
 	  //your code here!
+
+		
 	};
 
 
