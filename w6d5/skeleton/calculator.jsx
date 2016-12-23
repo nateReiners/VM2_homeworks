@@ -16,11 +16,12 @@ class Calculator extends React.Component {
 
   setNum1(e) {
     const num1 = e.target.value ? parseInt(e.target.value) : "";
-    this.setNum1({ num1 });
+    this.setState({ num1 });
   }
+
   setNum2(e) {
     const num2 = e.target.value ? parseInt(e.target.value) : "";
-    this.setNum2({ num2 });
+    this.setState({ num2 });
   }
 
   add(e) {
@@ -31,7 +32,7 @@ class Calculator extends React.Component {
 
   subtract(e) {
     e.preventDefault();
-    const result = this.state.num1 + this.state.num2;
+    const result = this.state.num1 - this.state.num2;
     this.setState({ result });
   }
 
