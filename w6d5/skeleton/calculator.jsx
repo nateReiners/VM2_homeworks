@@ -68,14 +68,9 @@ class Calculator extends React.Component {
         <button onClick={this.subtract}>-</button>
         <button onClick={this.multiply}>*</button>
         <button onClick={this.divide}>/</button>
-
         </div>
       );
     }
-
-  onChange(event) {
-
-  }
 }
 
 export default Calculator;
