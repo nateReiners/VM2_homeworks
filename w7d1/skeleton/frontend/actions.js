@@ -1,5 +1,3 @@
-
-
 const selectCurrency = (baseCurrency, rates) => {
 
   return {
