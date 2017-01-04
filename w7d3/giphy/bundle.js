@@ -20964,6 +20964,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -20973,8 +20977,20 @@
 	var _giphys_search_container = __webpack_require__(204);
 	
 	var _giphys_search_container2 = _interopRequireDefault(_giphys_search_container);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Root = function Root(_ref) {
+	  var store = _ref.store;
+	
+	  return _react2.default.createElement(
+	    _reactRedux.Provider,
+	    { store: store },
+	    _react2.default.createElement(_giphys_search_container2.default, null)
+	  );
+	};
+	
+	exports.default = Root;
 
 /***/ },
 /* 187 */
