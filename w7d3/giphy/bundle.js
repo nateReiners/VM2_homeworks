@@ -60,19 +60,12 @@
 	
 	var _root = __webpack_require__(186);
 	
-	var _root2 = _interopRequireDefault(_root);
-	
-	var _giphy_actions = __webpack_require__(184);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	  var store = (0, _store2.default)();
-	  var root = document.getElementById('root');
-	  window.store = store;
-	  window.fetchSearchGiphys = _giphy_actions.fetchSearchGiphys;
-	  window.receiveSearchGiphys = _giphy_actions.receiveSearchGiphys;
-	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
+		var store = (0, _store2.default)();
+		var root = document.getElementById('root');
+		_reactDom2.default.render(_react2.default.createElement(_root.Root, { store: store }), root);
 	});
 
 /***/ },
@@ -20967,6 +20960,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Root = undefined;
 	
 	var _react = __webpack_require__(1);
 	
@@ -20980,7 +20974,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Root = function Root(_ref) {
+	var Root = exports.Root = function Root(_ref) {
 	  var store = _ref.store;
 	
 	  return _react2.default.createElement(
@@ -20990,7 +20984,7 @@
 	  );
 	};
 	
-	exports.default = Root;
+	// export default Root;
 
 /***/ },
 /* 187 */
