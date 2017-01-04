@@ -7,7 +7,7 @@ class GiphysSearch extends React.Component {
     super();
     this.state = { searchTerm: "golden retriever" };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
