@@ -60,12 +60,14 @@
 	
 	var _root = __webpack_require__(186);
 	
+	var _root2 = _interopRequireDefault(_root);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		var store = (0, _store2.default)();
 		var root = document.getElementById('root');
-		_reactDom2.default.render(_react2.default.createElement(_root.Root, { store: store }), root);
+		_reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
 
 /***/ },
@@ -20960,7 +20962,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Root = undefined;
 	
 	var _react = __webpack_require__(1);
 	
@@ -20974,7 +20975,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Root = exports.Root = function Root(_ref) {
+	var Root = function Root(_ref) {
 	  var store = _ref.store;
 	
 	  return _react2.default.createElement(
@@ -20984,7 +20985,7 @@
 	  );
 	};
 	
-	// export default Root;
+	exports.default = Root;
 
 /***/ },
 /* 187 */
@@ -22183,6 +22184,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _reactRedux = __webpack_require__(187);
 	
 	var _giphys_search = __webpack_require__(205);
@@ -22192,6 +22197,20 @@
 	var _giphy_actions = __webpack_require__(184);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var mapStateToProps = function mapStateToProps(state) {
+	  return {
+	    giphys: state.giphys
+	  };
+	};
+	
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return { fetchSearchGiphys: function fetchSearchGiphys(searchTerm) {
+	      return dispatch((0, _giphy_actions.fetchSearchGiphys)(searchTerm));
+	    } };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_giphys_search2.default);
 
 /***/ },
 /* 205 */
@@ -22199,15 +22218,41 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRedux = __webpack_require__(187);
+	
+	var _giphys_search = __webpack_require__(205);
+	
+	var _giphys_search2 = _interopRequireDefault(_giphys_search);
+	
+	var _giphy_actions = __webpack_require__(184);
+	
 	var _giphys_index = __webpack_require__(206);
 	
 	var _giphys_index2 = _interopRequireDefault(_giphys_index);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var mapStateToProps = function mapStateToProps(state) {
+	  return {
+	    giphys: state.giphys
+	  };
+	};
+	
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return { fetchSearchGiphys: function fetchSearchGiphys(searchTerm) {
+	      return dispatch((0, _giphy_actions.fetchSearchGiphys)(searchTerm));
+	    } };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_giphys_search2.default);
 
 /***/ },
 /* 206 */
